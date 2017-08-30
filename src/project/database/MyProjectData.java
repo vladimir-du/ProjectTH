@@ -9,6 +9,9 @@ import java.util.ArrayList;
  */
 public class MyProjectData {
 
+    /**
+     * New projects container
+     */
     private static ArrayList<MyProject> projects = new ArrayList<>();
 
     /**
@@ -23,8 +26,8 @@ public class MyProjectData {
      * @return {@Link MyProject} entity by given name.
      */
     public static MyProject getProjectByName(String name){
-        for (int i = 0; i < projects.size(); i++) {
-            if(name.equals(projects.get(i).getName())) return projects.get(i);
+        for (MyProject project : projects) {
+            if (name.equals(project.getName())) return project;
         }
         return null;
     }
